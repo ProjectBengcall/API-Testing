@@ -33,4 +33,9 @@ public class StatusCode {
         SerenityRest.then()
                 .statusCode(notFound);
     }
+    @Then("Api should return response {int} Unauthorized")
+    public void apiShouldReturnResponseUnauthorized(int unauthorized) {
+        SerenityRest.then()
+                .statusCode(unauthorized);
+    }
 }
