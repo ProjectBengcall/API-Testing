@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "service_name": {
+              "type": "string"
+            },
+            "price": {
+              "type": "integer"
+            },
+            "vehicle_id": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "service_name",
+            "price",
+            "vehicle_id"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}

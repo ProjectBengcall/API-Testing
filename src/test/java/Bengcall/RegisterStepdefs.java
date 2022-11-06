@@ -8,6 +8,7 @@ import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 
 import java.io.File;
+import static org.hamcrest.Matchers.equalTo;
 
 public class RegisterStepdefs {
     @Steps
@@ -24,7 +25,7 @@ public class RegisterStepdefs {
                 .post(BengcallAPI.POST_REGISTER_USER_VALID_PATH);
     }
 
-    @And("Post register user assert json validation")
+    @And("Post register customer assert json validation")
     public void postRegisterUserAssertJsonValidation() {
         File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/PostRegisterValidCustomerJsonSchemaValidation.json");
         SerenityRest.then()
@@ -76,5 +77,25 @@ public class RegisterStepdefs {
     public void postRegisterCustomerWithTwoFieldMandatoryIsEmpty() {
         File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerTwoField.json");
         bengcallAPI.postRegisterCustomer(jsonFiles);
+    }
+
+    @And("Response body should contain fullname {string}, email {string}, message {string}")
+    public void responseBodyShouldContainUserMessage(String fullname, String email, String message) {
+        SerenityRest.then()
+                .body(BengcallAPIResponse.FULLNAME,equalTo(fullname))
+                .body(BengcallAPIResponse.EMAIL,equalTo(email))
+                .body(BengcallAPIResponse.MESSAGE,equalTo(message));
+    }
+
+    @And("Response body invalid credentials should contain message {string}")
+    public void responseBodyInvalidPasswordAndFullnameShouldContainMessage(String message) {
+        SerenityRest.then()
+                .body(BengcallAPIResponse.MESSAGE,equalTo(message));
+    }
+
+    @And("Response body invalid path should contain message {string}")
+    public void responseBodyInvalidPathShouldContainMessage(String message) {
+        SerenityRest.then()
+                .body(BengcallAPIResponse.MESSAGE,equalTo(message));
     }
 }
