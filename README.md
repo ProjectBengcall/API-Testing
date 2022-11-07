@@ -72,5 +72,5 @@
   [![GitHub](https://img.shields.io/badge/-Riovaldo%20Todoan%20Sihombing-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/eltodoan])
 
 <h5>
-<p align="center">:copyright: 2022 | This repository Built with :heart: from us</p>
+<p align="center">:copyright: 2022 | This Repository Built with :heart: from us</p>
 </h5>
