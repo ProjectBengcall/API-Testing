@@ -18,8 +18,9 @@
 
 ## 📓 Testing Documentation
 [Test Case API](https://docs.google.com/spreadsheets/d/1PiTyEaUEnev3VWnekC4_H_NPv4qrIAJJvtHs6haPhmU/edit?usp=sharing)
-<!--
+
 ## 📝 Reports
+<!--
 #### Login
 ![report-api-login](https://user-images.githubusercontent.com/68207916/186056420-bf4e443d-2e33-45e8-a07c-ac6757ceb643.png)
 
