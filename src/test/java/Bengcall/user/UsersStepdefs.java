@@ -1,4 +1,4 @@
-package Bengcall;
+package Bengcall.user;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class UsersStepdefs {
     @Steps
-    BengcallAPI bengcallAPI;
+    BengcallAPIUsers bengcallAPI;
     @Given("Get a customer profile with valid token")
     public void getACustomerProfileWithValidToken() {
         bengcallAPI.getCustomerProfileValidToken();
@@ -21,22 +21,22 @@ public class UsersStepdefs {
     @When("send request get customer profile valid path")
     public void sendRequestGetCustomerProfile() {
         SerenityRest.when()
-                .get(BengcallAPI.CUSTOMER_PROFILE_VALID_PATH);
+                .get(BengcallAPIUsers.CUSTOMER_PROFILE_VALID_PATH);
     }
     @When("send request put customer profile valid path")
     public void sendRequestPutCustomerProfile() {
         SerenityRest.when()
-                .put(BengcallAPI.CUSTOMER_PROFILE_VALID_PATH);
+                .put(BengcallAPIUsers.CUSTOMER_PROFILE_VALID_PATH);
     }
     @When("send request delete customer profile valid path")
     public void sendRequestDeleteCustomerProfile() {
         SerenityRest.when()
-                .delete(BengcallAPI.CUSTOMER_PROFILE_VALID_PATH);
+                .delete(BengcallAPIUsers.CUSTOMER_PROFILE_VALID_PATH);
     }
 
     @And("Get customer profile assert json validation")
     public void getCustomerProfileAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/GetCustomerProfileValidTokenJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/GetCustomerProfileValidTokenJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -49,7 +49,7 @@ public class UsersStepdefs {
 
     @And("Get customer profile expired token assert json validation")
     public void getCustomerProfileExpiredTokenAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -58,22 +58,22 @@ public class UsersStepdefs {
     @When("send request get customer profile invalid path")
     public void sendRequestGetCustomerProfileInvalidPath() {
         SerenityRest.when()
-                .get(BengcallAPI.CUSTOMER_PROFILE_INVALID_PATH);
+                .get(BengcallAPIUsers.CUSTOMER_PROFILE_INVALID_PATH);
     }
     @When("send request put customer profile invalid path")
     public void sendRequestPutCustomerProfileInvalidPath() {
         SerenityRest.when()
-                .put(BengcallAPI.CUSTOMER_PROFILE_INVALID_PATH);
+                .put(BengcallAPIUsers.CUSTOMER_PROFILE_INVALID_PATH);
     }
     @When("send request delete customer profile invalid path")
     public void sendRequestDeleteCustomerProfileInvalidPath() {
         SerenityRest.when()
-                .delete(BengcallAPI.CUSTOMER_PROFILE_INVALID_PATH);
+                .delete(BengcallAPIUsers.CUSTOMER_PROFILE_INVALID_PATH);
     }
 
     @And("Get customer profile invalid path assert json validation")
     public void getCustomerProfileInvalidPathAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -81,13 +81,13 @@ public class UsersStepdefs {
 
     @Given("Update customer profile with valid token")
     public void updateUserProfileWithValidToken() {
-        File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfileValidCredentials.json");
+        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfileValidCredentials.json");
         bengcallAPI.putUpdateCustomerProfileValidToken(jsonFiles);
     }
 
     @And("Put update customer profile valid token assert json validation")
     public void putUpdateCustomerProfileValidTokenAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/PutUpdateCustomerProfileValidTokenJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/PutUpdateCustomerProfileValidTokenJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -95,13 +95,13 @@ public class UsersStepdefs {
 
     @Given("Update a customer profile with expired token")
     public void updateACustomerProfileWithExpiredToken() {
-        File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfileValidCredentials.json");
+        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfileValidCredentials.json");
         bengcallAPI.putUpdateCustomerProfileExpiredToken(jsonFiles);
     }
 
     @Given("Update customer profile with password less than 8 characters")
     public void updateCustomerProfileWithPasswordLessThanCharacters() {
-        File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfilePasswordLess.json");
+        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfilePasswordLess.json");
         bengcallAPI.putUpdateCustomerProfileValidToken(jsonFiles);
     }
 
@@ -117,7 +117,7 @@ public class UsersStepdefs {
 
     @And("Delete customer accound assert json validation")
     public void deleteCustomerAccoundAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/DeleteCustomerAccountValidTokenJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/DeleteCustomerAccountValidTokenJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -131,25 +131,25 @@ public class UsersStepdefs {
     @And("Response body should contain message {string}, id {int} fullname {string}, images {string}, email {string}")
     public void responseBodyShouldContainMessageIdFullnameImagesEmail(String message, int id, String fullname, String images, String email) {
         SerenityRest.then()
-                .body(BengcallAPIResponse.MESSAGE, equalTo(message))
-                .body(BengcallAPIResponse.ID, equalTo(id))
-                .body(BengcallAPIResponse.FULLNAME, equalTo(fullname))
-                .body(BengcallAPIResponse.IMAGES, equalTo(images))
-                .body(BengcallAPIResponse.EMAIL, equalTo(email));
+                .body(BengcallAPIResponseUser.MESSAGE, equalTo(message))
+                .body(BengcallAPIResponseUser.ID, equalTo(id))
+                .body(BengcallAPIResponseUser.FULLNAME, equalTo(fullname))
+                .body(BengcallAPIResponseUser.IMAGES, equalTo(images))
+                .body(BengcallAPIResponseUser.EMAIL, equalTo(email));
     }
 
     @And("Response body should contain message {string}, fullname {string}, images {string}, email {string}")
     public void responseBodyShouldContainMessageFullnameImagesEmail(String message, String fullname, String images, String email) {
         SerenityRest.then()
-                .body(BengcallAPIResponse.MESSAGE, equalTo(message))
-                .body(BengcallAPIResponse.FULLNAME, equalTo(fullname))
-                .body(BengcallAPIResponse.IMAGES, equalTo(images))
-                .body(BengcallAPIResponse.EMAIL, equalTo(email));
+                .body(BengcallAPIResponseUser.MESSAGE, equalTo(message))
+                .body(BengcallAPIResponseUser.FULLNAME, equalTo(fullname))
+                .body(BengcallAPIResponseUser.IMAGES, equalTo(images))
+                .body(BengcallAPIResponseUser.EMAIL, equalTo(email));
     }
 
     @And("Response body delete account should contain message {string}")
     public void responseBodyShouldContainMessage(String message) {
         SerenityRest.then()
-                .body(BengcallAPIResponse.MESSAGE, equalTo(message));
+                .body(BengcallAPIResponseUser.MESSAGE, equalTo(message));
     }
 }

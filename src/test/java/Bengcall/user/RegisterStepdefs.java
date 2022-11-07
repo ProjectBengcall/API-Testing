@@ -1,4 +1,4 @@
-package Bengcall;
+package Bengcall.user;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -12,22 +12,22 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class RegisterStepdefs {
     @Steps
-    BengcallAPI bengcallAPI;
+    BengcallAPIUsers bengcallAPI;
     @Given("post register customer with valid credential")
     public void postRegisterCustomerWithValidCredential() {
-        File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterValidCustomer.json");
+        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterValidCustomer.json");
         bengcallAPI.postRegisterCustomer(jsonFiles);
     }
 
     @When("send request post register customer valid path")
     public void sendRequestPostRegisterCustomer() {
         SerenityRest.when()
-                .post(BengcallAPI.POST_REGISTER_USER_VALID_PATH);
+                .post(BengcallAPIUsers.POST_REGISTER_USER_VALID_PATH);
     }
 
     @And("Post register customer assert json validation")
     public void postRegisterUserAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/PostRegisterValidCustomerJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/PostRegisterValidCustomerJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -35,13 +35,13 @@ public class RegisterStepdefs {
 
     @Given("post register customer with invalid password less than 8 characters")
     public void postRegisterCustomerWithInvalidCredentialPasswordLessThanCharacters() {
-        File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerInvalidPassword.json");
+        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerInvalidPassword.json");
         bengcallAPI.postRegisterCustomer(jsonFiles);
     }
 
     @And("Post register user with invalid password assert json validation")
     public void postRegisterUserWithInvalidPasswordAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -49,19 +49,19 @@ public class RegisterStepdefs {
 
     @Given("post register customer without credentials")
     public void postRegisterCustomerWithoutCredentials() {
-        File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerWithoutCredentials.json");
+        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerWithoutCredentials.json");
         bengcallAPI.postRegisterCustomer(jsonFiles);
     }
 
     @When("send request post register customer invalid path")
     public void sendRequestPostRegisterCustomerInvalidPath() {
         SerenityRest.when()
-                .post(BengcallAPI.POST_REGISTER_USER_INVALID_PATH);
+                .post(BengcallAPIUsers.POST_REGISTER_USER_INVALID_PATH);
     }
 
     @And("Post register user with invalid path assert json validation")
     public void postRegisterUserWithInvalidPathAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -69,33 +69,33 @@ public class RegisterStepdefs {
 
     @Given("post register customer with one field mandatory is empty")
     public void postRegisterCustomerWithOneFieldMandatoryIsEmpty() {
-        File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerOneField.json");
+        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerOneField.json");
         bengcallAPI.postRegisterCustomer(jsonFiles);
     }
 
     @Given("post register customer with two field mandatory is empty")
     public void postRegisterCustomerWithTwoFieldMandatoryIsEmpty() {
-        File jsonFiles = new File(BengcallAPI.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerTwoField.json");
+        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerTwoField.json");
         bengcallAPI.postRegisterCustomer(jsonFiles);
     }
 
     @And("Response body should contain fullname {string}, email {string}, message {string}")
     public void responseBodyShouldContainUserMessage(String fullname, String email, String message) {
         SerenityRest.then()
-                .body(BengcallAPIResponse.FULLNAME,equalTo(fullname))
-                .body(BengcallAPIResponse.EMAIL,equalTo(email))
-                .body(BengcallAPIResponse.MESSAGE,equalTo(message));
+                .body(BengcallAPIResponseUser.FULLNAME,equalTo(fullname))
+                .body(BengcallAPIResponseUser.EMAIL,equalTo(email))
+                .body(BengcallAPIResponseUser.MESSAGE,equalTo(message));
     }
 
     @And("Response body invalid credentials should contain message {string}")
     public void responseBodyInvalidPasswordAndFullnameShouldContainMessage(String message) {
         SerenityRest.then()
-                .body(BengcallAPIResponse.MESSAGE,equalTo(message));
+                .body(BengcallAPIResponseUser.MESSAGE,equalTo(message));
     }
 
     @And("Response body invalid path should contain message {string}")
     public void responseBodyInvalidPathShouldContainMessage(String message) {
         SerenityRest.then()
-                .body(BengcallAPIResponse.MESSAGE,equalTo(message));
+                .body(BengcallAPIResponseUser.MESSAGE,equalTo(message));
     }
 }

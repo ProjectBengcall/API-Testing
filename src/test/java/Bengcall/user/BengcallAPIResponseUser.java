@@ -1,6 +1,6 @@
-package Bengcall;
+package Bengcall.user;
 
-public class BengcallAPIResponse {
+public class BengcallAPIResponseUser {
     public static final String MESSAGE ="message";
     public static final String FULLNAME ="data.fullname";
     public static final String ID ="data.id";

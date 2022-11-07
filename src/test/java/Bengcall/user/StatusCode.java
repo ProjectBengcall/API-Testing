@@ -1,4 +1,4 @@
-package Bengcall;
+package Bengcall.user;
 
 import io.cucumber.java.en.Then;
 import net.serenitybdd.rest.SerenityRest;

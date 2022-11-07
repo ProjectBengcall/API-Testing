@@ -1,4 +1,4 @@
-package Bengcall;
+package Bengcall.user;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.in;
 
 public class ServicesCustomerStepdefs {
     @Steps
-    BengcallAPI bengcallAPI;
+    BengcallAPIUsers bengcallAPI;
     @Given("Get see avalaible services with valid id vehicle {int}")
     public void getSeeAvalaibleServicesWithValidIdVehicleId(int id) {
         bengcallAPI.getServicesValidToken(id);
@@ -23,7 +23,7 @@ public class ServicesCustomerStepdefs {
 
     @And("Get all services assert json validation")
     public void getAllServicesAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPI.JSON_FILE+"/JsonSchemaValidation/Customer/GetCustomerServiceValidTokenJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/GetCustomerServiceValidTokenJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -32,18 +32,18 @@ public class ServicesCustomerStepdefs {
     @And("Response body should contain message {string}, id {int}, service name {string}, price {int}, vehicle id {int}")
     public void responseBodyShouldContainMessageIdServiceNamePriceVehicleId(String message, int id, String serviceName, int price, int vehicleId) {
         SerenityRest.then()
-                .body(BengcallAPIResponse.MESSAGE, equalTo(message))
-                .body(BengcallAPIResponse.SERVICE_ID, equalTo(id))
-                .body(BengcallAPIResponse.SERVICE_NAME, equalTo(serviceName))
-                .body(BengcallAPIResponse.PRICE, equalTo(price))
-                .body(BengcallAPIResponse.VEHICLE_ID, equalTo(vehicleId));
+                .body(BengcallAPIResponseUser.MESSAGE, equalTo(message))
+                .body(BengcallAPIResponseUser.SERVICE_ID, equalTo(id))
+                .body(BengcallAPIResponseUser.SERVICE_NAME, equalTo(serviceName))
+                .body(BengcallAPIResponseUser.PRICE, equalTo(price))
+                .body(BengcallAPIResponseUser.VEHICLE_ID, equalTo(vehicleId));
 
     }
 
     @When("send request get services type customer with valid path")
     public void sendRequestGetServicesTypeCustomerWithValidPath() {
         SerenityRest.when()
-                .get(BengcallAPI.CUSTOMER_SERVICES_VALID_PATH);
+                .get(BengcallAPIUsers.CUSTOMER_SERVICES_VALID_PATH);
     }
 
     @Given("Get see avalaible services with invalid id vehicle {string}")
@@ -59,7 +59,7 @@ public class ServicesCustomerStepdefs {
     @When("send request get services type customer with invalid path")
     public void sendRequestGetServicesTypeCustomerWithInvalidPath() {
         SerenityRest.when()
-                .get(BengcallAPI.CUSTOMER_SERVICES_INVALID_PATH);
+                .get(BengcallAPIUsers.CUSTOMER_SERVICES_INVALID_PATH);
     }
 
     @Given("Get see avalaible services with valid id vehicle {int} and expired token")
