@@ -12,11 +12,11 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class LoginStepdefs {
     @Steps
-    BengcallAPIUsers bengcallAPI;
+    BengcallAPIUsers bengcallAPIUsers;
     @Given("post login customer with valid credentials")
     public void postLoginCustomerWithValidCredentials() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTLoginValidCustomer.json");
-        bengcallAPI.postLoginCustomer(jsonFiles);
+        bengcallAPIUsers.postLoginCustomer(jsonFiles);
     }
 
     @When("send request post login customer valid path")
@@ -36,19 +36,19 @@ public class LoginStepdefs {
     @Given("post Login customer with email field is empty")
     public void postLoginCustomerWithEmailFieldIsEmpty() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTLoginInvalidEmailEmpty.json");
-        bengcallAPI.postLoginCustomer(jsonFiles);
+        bengcallAPIUsers.postLoginCustomer(jsonFiles);
     }
 
     @Given("post Login customer with password field is empty")
     public void postLoginCustomerWithPasswordFieldIsEmpty() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTLoginInvalidPasswoedEmpty.json");
-        bengcallAPI.postLoginCustomer(jsonFiles);
+        bengcallAPIUsers.postLoginCustomer(jsonFiles);
     }
 
     @Given("post Login customer without credentials")
     public void postLoginCustomerWithoutCredentials() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTLoginWithoutCredentials.json");
-        bengcallAPI.postLoginCustomer(jsonFiles);
+        bengcallAPIUsers.postLoginCustomer(jsonFiles);
     }
 
     @When("send request post login customer invalid path")

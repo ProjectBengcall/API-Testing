@@ -13,10 +13,10 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class VehiclesStepdefs {
     @Steps
-    BengcallAPIUsers bengcallAPI;
+    BengcallAPIUsers bengcallAPIUsers;
     @Given("Get See all types of vehicles available to be serviced with valid token")
     public void getSeeAllTypesOfVehiclesAvailableToBeServicedWithValidToken() {
-        bengcallAPI.getVehiclesValidToken();
+        bengcallAPIUsers.getVehiclesValidToken();
     }
 
     @When("send request get vehicles valid path")
@@ -35,7 +35,7 @@ public class VehiclesStepdefs {
 
     @Given("Get See all types of vehicles available to be serviced with expired token")
     public void getSeeAllTypesOfVehiclesAvailableToBeServicedWithExpiredToken() {
-        bengcallAPI.getVehiclesExpiredToken();
+        bengcallAPIUsers.getVehiclesExpiredToken();
     }
 
     @When("send request get vehicles invalid path")

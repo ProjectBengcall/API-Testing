@@ -10,14 +10,13 @@ import net.thucydides.core.annotations.Steps;
 import java.io.File;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.in;
 
 public class ServicesCustomerStepdefs {
     @Steps
-    BengcallAPIUsers bengcallAPI;
+    BengcallAPIUsers bengcallAPIUsers;
     @Given("Get see avalaible services with valid id vehicle {int}")
     public void getSeeAvalaibleServicesWithValidIdVehicleId(int id) {
-        bengcallAPI.getServicesValidToken(id);
+        bengcallAPIUsers.getServicesValidToken(id);
 
     }
 
@@ -48,12 +47,12 @@ public class ServicesCustomerStepdefs {
 
     @Given("Get see avalaible services with invalid id vehicle {string}")
     public void getSeeAvalaibleServicesWithIdVehicleDoesNotExist(String invalidId) {
-        bengcallAPI.getServicesValidTokenAndInvalidId(invalidId);
+        bengcallAPIUsers.getServicesValidTokenAndInvalidId(invalidId);
     }
 
     @Given("Get see avalaible services with valid id vehicle does not exist {int}")
     public void getSeeAvalaibleServicesWithValidIdVehicleDoesNotExist(int id) {
-        bengcallAPI.getServicesValidToken(id);
+        bengcallAPIUsers.getServicesValidToken(id);
     }
 
     @When("send request get services type customer with invalid path")
@@ -64,7 +63,7 @@ public class ServicesCustomerStepdefs {
 
     @Given("Get see avalaible services with valid id vehicle {int} and expired token")
     public void getSeeAvalaibleServicesWithValidIdVehicleAndExpiredToken(int id) {
-        bengcallAPI.getServicesExpiredTokenAndInvalidId(id);
+        bengcallAPIUsers.getServicesExpiredTokenAndInvalidId(id);
 
     }
 }

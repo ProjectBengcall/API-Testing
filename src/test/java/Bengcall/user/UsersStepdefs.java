@@ -12,10 +12,10 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class UsersStepdefs {
     @Steps
-    BengcallAPIUsers bengcallAPI;
+    BengcallAPIUsers bengcallAPIUsers;
     @Given("Get a customer profile with valid token")
     public void getACustomerProfileWithValidToken() {
-        bengcallAPI.getCustomerProfileValidToken();
+        bengcallAPIUsers.getCustomerProfileValidToken();
     }
 
     @When("send request get customer profile valid path")
@@ -44,7 +44,7 @@ public class UsersStepdefs {
 
     @Given("Get a customer profile with expired token")
     public void getACustomerProfileWithExpiredToken() {
-        bengcallAPI.getCustomerProfileExpiredToken();
+        bengcallAPIUsers.getCustomerProfileExpiredToken();
     }
 
     @And("Get customer profile expired token assert json validation")
@@ -82,7 +82,7 @@ public class UsersStepdefs {
     @Given("Update customer profile with valid token")
     public void updateUserProfileWithValidToken() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfileValidCredentials.json");
-        bengcallAPI.putUpdateCustomerProfileValidToken(jsonFiles);
+        bengcallAPIUsers.putUpdateCustomerProfileValidToken(jsonFiles);
     }
 
     @And("Put update customer profile valid token assert json validation")
@@ -96,23 +96,23 @@ public class UsersStepdefs {
     @Given("Update a customer profile with expired token")
     public void updateACustomerProfileWithExpiredToken() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfileValidCredentials.json");
-        bengcallAPI.putUpdateCustomerProfileExpiredToken(jsonFiles);
+        bengcallAPIUsers.putUpdateCustomerProfileExpiredToken(jsonFiles);
     }
 
     @Given("Update customer profile with password less than 8 characters")
     public void updateCustomerProfileWithPasswordLessThanCharacters() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/PUTUpdateCustomerProfilePasswordLess.json");
-        bengcallAPI.putUpdateCustomerProfileValidToken(jsonFiles);
+        bengcallAPIUsers.putUpdateCustomerProfileValidToken(jsonFiles);
     }
 
     @Given("Deactivate customer account with valid token")
     public void deactivateCustomerAccountWithValidToken() {
-        bengcallAPI.deleteCustomerAccountValidToken();
+        bengcallAPIUsers.deleteCustomerAccountValidToken();
     }
 
     @Given("Deactivate customer account with invalid token")
     public void deactivateCustomerAccountWithInvalidToken() {
-        bengcallAPI.deleteCustomerAccountExpiredToken();
+        bengcallAPIUsers.deleteCustomerAccountExpiredToken();
     }
 
     @And("Delete customer accound assert json validation")
@@ -125,7 +125,7 @@ public class UsersStepdefs {
 
     @Given("Deactivate customer account on customer account is already delete")
     public void deactivateCustomerAccountOnCustomerAccountIsAlreadyDelete() {
-        bengcallAPI.deleteCustomerAccountIsNotExist();
+        bengcallAPIUsers.deleteCustomerAccountIsNotExist();
     }
 
     @And("Response body should contain message {string}, id {int} fullname {string}, images {string}, email {string}")

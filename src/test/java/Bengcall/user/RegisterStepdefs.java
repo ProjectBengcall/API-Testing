@@ -12,11 +12,11 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class RegisterStepdefs {
     @Steps
-    BengcallAPIUsers bengcallAPI;
+    BengcallAPIUsers bengcallAPIUsers;
     @Given("post register customer with valid credential")
     public void postRegisterCustomerWithValidCredential() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterValidCustomer.json");
-        bengcallAPI.postRegisterCustomer(jsonFiles);
+        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
     }
 
     @When("send request post register customer valid path")
@@ -36,7 +36,7 @@ public class RegisterStepdefs {
     @Given("post register customer with invalid password less than 8 characters")
     public void postRegisterCustomerWithInvalidCredentialPasswordLessThanCharacters() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerInvalidPassword.json");
-        bengcallAPI.postRegisterCustomer(jsonFiles);
+        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
     }
 
     @And("Post register user with invalid password assert json validation")
@@ -50,7 +50,7 @@ public class RegisterStepdefs {
     @Given("post register customer without credentials")
     public void postRegisterCustomerWithoutCredentials() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerWithoutCredentials.json");
-        bengcallAPI.postRegisterCustomer(jsonFiles);
+        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
     }
 
     @When("send request post register customer invalid path")
@@ -70,13 +70,13 @@ public class RegisterStepdefs {
     @Given("post register customer with one field mandatory is empty")
     public void postRegisterCustomerWithOneFieldMandatoryIsEmpty() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerOneField.json");
-        bengcallAPI.postRegisterCustomer(jsonFiles);
+        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
     }
 
     @Given("post register customer with two field mandatory is empty")
     public void postRegisterCustomerWithTwoFieldMandatoryIsEmpty() {
         File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerTwoField.json");
-        bengcallAPI.postRegisterCustomer(jsonFiles);
+        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
     }
 
     @And("Response body should contain fullname {string}, email {string}, message {string}")
