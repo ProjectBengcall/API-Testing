@@ -1,4 +1,4 @@
-package Bengcall;
+package Bengcall.Admin;
 
 import io.cucumber.java.en.Then;
 import net.serenitybdd.rest.SerenityRest;
@@ -37,5 +37,11 @@ public class StatusCode {
     public void apiShouldReturnResponseUnauthorized(int unauthorized) {
         SerenityRest.then()
                 .statusCode(unauthorized);
+    }
+
+    @Then("Api should return response {int} Method Not Allowed")
+    public void apiShouldReturnResponseIntMethodNotAllowed(int Method_Not_Allowed) {
+        SerenityRest.then()
+                .statusCode(Method_Not_Allowed);
     }
 }
