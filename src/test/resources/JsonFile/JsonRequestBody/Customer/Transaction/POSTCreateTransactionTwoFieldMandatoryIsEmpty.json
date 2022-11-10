@@ -1,0 +1,12 @@
+{
+  "date": "",
+  "phone": "0854212194",
+  "address": "Jl. Sudirman No. 15, Surabaya",
+  "detail": [
+    {
+      "vehicle_id": 1,
+      "service_id": 1,
+      "sub-total": 50000
+    }
+  ]
+}

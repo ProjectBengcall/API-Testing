@@ -11,18 +11,17 @@ import java.io.File;
 
 import static org.hamcrest.Matchers.equalTo;
 
-public class ServicesCustomerStepdefs {
+public class ServicesUserStepdefs {
     @Steps
-    BengcallAPIUsers bengcallAPIUsers;
+    BengcallAPIUser bengcallAPIUser;
     @Given("Get see avalaible services with valid id vehicle {int}")
     public void getSeeAvalaibleServicesWithValidIdVehicleId(int id) {
-        bengcallAPIUsers.getServicesValidToken(id);
-
+        bengcallAPIUser.getServicesValidToken(id);
     }
 
     @And("Get all services assert json validation")
     public void getAllServicesAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/GetCustomerServiceValidTokenJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/Service/GetUserServiceValidTokenJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -42,28 +41,27 @@ public class ServicesCustomerStepdefs {
     @When("send request get services type customer with valid path")
     public void sendRequestGetServicesTypeCustomerWithValidPath() {
         SerenityRest.when()
-                .get(BengcallAPIUsers.CUSTOMER_SERVICES_VALID_PATH);
+                .get(BengcallAPIUser.CUSTOMER_SERVICES_VALID_PATH);
     }
 
     @Given("Get see avalaible services with invalid id vehicle {string}")
     public void getSeeAvalaibleServicesWithIdVehicleDoesNotExist(String invalidId) {
-        bengcallAPIUsers.getServicesValidTokenAndInvalidId(invalidId);
+        bengcallAPIUser.getServicesValidTokenAndInvalidId(invalidId);
     }
 
     @Given("Get see avalaible services with valid id vehicle does not exist {int}")
     public void getSeeAvalaibleServicesWithValidIdVehicleDoesNotExist(int id) {
-        bengcallAPIUsers.getServicesValidToken(id);
+        bengcallAPIUser.getServicesValidToken(id);
     }
 
     @When("send request get services type customer with invalid path")
     public void sendRequestGetServicesTypeCustomerWithInvalidPath() {
         SerenityRest.when()
-                .get(BengcallAPIUsers.CUSTOMER_SERVICES_INVALID_PATH);
+                .get(BengcallAPIUser.CUSTOMER_SERVICES_INVALID_PATH);
     }
 
     @Given("Get see avalaible services with valid id vehicle {int} and expired token")
     public void getSeeAvalaibleServicesWithValidIdVehicleAndExpiredToken(int id) {
-        bengcallAPIUsers.getServicesExpiredTokenAndInvalidId(id);
-
+        bengcallAPIUser.getServicesExpiredTokenAndInvalidId(id);
     }
 }

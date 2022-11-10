@@ -11,13 +11,21 @@
             "id": {
               "type": "integer"
             },
-            "name": {
+            "name_vehicle": {
               "type": "string"
+            },
+            "service_name": {
+              "type": "string"
+            },
+            "price": {
+              "type": "integer"
             }
           },
           "required": [
             "id",
-            "name"
+            "name_vehicle",
+            "service_name",
+            "price"
           ]
         },
         {
@@ -26,28 +34,21 @@
             "id": {
               "type": "integer"
             },
-            "name": {
+            "name_vehicle": {
               "type": "string"
-            }
-          },
-          "required": [
-            "id",
-            "name"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "integer"
             },
-            "name": {
+            "service_name": {
               "type": "string"
+            },
+            "price": {
+              "type": "integer"
             }
           },
           "required": [
             "id",
-            "name"
+            "name_vehicle",
+            "service_name",
+            "price"
           ]
         }
       ]

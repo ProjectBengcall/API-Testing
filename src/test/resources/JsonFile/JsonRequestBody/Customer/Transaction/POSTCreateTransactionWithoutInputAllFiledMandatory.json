@@ -1,0 +1,13 @@
+{
+  "location": "",
+  "date": "",
+  "phone": "",
+  "address": "",
+  "detail": [
+    {
+      "vehicle_id": "",
+      "service_id": "",
+      "sub-total": ""
+    }
+  ]
+}

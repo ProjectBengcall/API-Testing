@@ -20,12 +20,16 @@ Feature: Customer Profile
     And response body failed assert json validation
     And Response body invalid path should contain message "Not Found"
 
-  Scenario: PUT Update customer profile with valid token and valid credentials
-    Given Update customer profile with valid token
+  Scenario Outline: PUT Update customer profiled with valid credentials
+    Given Update customer profile with valid token and input fullname "<fullname>", email "<email>", password "<password>" and image
     When send request put customer profile valid path
-    Then Api should return response 200 OK
+    Then Api should return response 202 Accepted
     And Put update customer profile valid token assert json validation
-    And Response body should contain message "Success update user", fullname "Risa", images "risa.png", email "risa@gmail.com"
+    And Response body should contain message "success update user", fullname "<fullname>", email "<email>"
+  Examples:
+    | fullname | email | password |
+    | Tomi     | tomi@gmail.com | tomitomi1 |
+
 
   Scenario: PUT Update a customer profile with expired token
     Given Update a customer profile with expired token
@@ -35,7 +39,7 @@ Feature: Customer Profile
     And Response body invalid credentials should contain message "invalid or expired jwt"
 
   Scenario: PUT Update Customer profil with invalid path
-    Given Update customer profile with valid token
+    Given Update customer profile with valid token and input fullname "Tomi Prasetyo", email "tomipras@gmail.com", password "tomigreat112" and image
     When send request put customer profile invalid path
     Then Api should return response 404 Not Found
     And response body failed assert json validation
@@ -46,12 +50,19 @@ Feature: Customer Profile
     When send request put customer profile valid path
     Then Api should return response 400 Bad Request
     And response body failed assert json validation
-    And Response body invalid path should contain message "Bad Request"
+    And Response body invalid path should contain message "invalid password"
+
+  Scenario: PUT Update customer profiled without input all mandatory field
+    Given Update customer profile without input all mandatory field
+    When send request put customer profile valid path
+    Then Api should return response 400 Bad Request
+    And response body failed assert json validation
+    And Response body invalid path should contain message "Unsuccess update user"
 
   Scenario: DELETE Customer account with valid token
     Given Deactivate customer account with valid token
     When send request delete customer profile valid path
-    Then Api should return response 200 OK
+    Then Api should return response 202 Accepted
     And Delete customer accound assert json validation
     And Response body delete account should contain message "success deactivate account"
 
@@ -75,5 +86,7 @@ Feature: Customer Profile
     Then Api should return response 404 Not Found
     And Delete customer accound assert json validation
     And Response body invalid path should contain message "Not Found"
+
+
 
 

@@ -10,24 +10,24 @@ import net.thucydides.core.annotations.Steps;
 import java.io.File;
 import static org.hamcrest.Matchers.equalTo;
 
-public class RegisterStepdefs {
+public class RegisterUserStepdefs {
     @Steps
-    BengcallAPIUsers bengcallAPIUsers;
+    BengcallAPIUser bengcallAPIUser;
     @Given("post register customer with valid credential")
     public void postRegisterCustomerWithValidCredential() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterValidCustomer.json");
-        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Register/POSTRegisterValidUser.json");
+        bengcallAPIUser.postRegisterCustomer(jsonFiles);
     }
 
     @When("send request post register customer valid path")
     public void sendRequestPostRegisterCustomer() {
         SerenityRest.when()
-                .post(BengcallAPIUsers.POST_REGISTER_USER_VALID_PATH);
+                .post(BengcallAPIUser.POST_REGISTER_USER_VALID_PATH);
     }
 
     @And("Post register customer assert json validation")
     public void postRegisterUserAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/PostRegisterValidCustomerJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/Register/PostRegisterValidUserJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -35,13 +35,13 @@ public class RegisterStepdefs {
 
     @Given("post register customer with invalid password less than 8 characters")
     public void postRegisterCustomerWithInvalidCredentialPasswordLessThanCharacters() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerInvalidPassword.json");
-        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Register/POSTRegisterUserInvalidPassword.json");
+        bengcallAPIUser.postRegisterCustomer(jsonFiles);
     }
 
     @And("Post register user with invalid password assert json validation")
     public void postRegisterUserWithInvalidPasswordAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -49,19 +49,19 @@ public class RegisterStepdefs {
 
     @Given("post register customer without credentials")
     public void postRegisterCustomerWithoutCredentials() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerWithoutCredentials.json");
-        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Register/POSTRegisterUserWithoutCredentials.json");
+        bengcallAPIUser.postRegisterCustomer(jsonFiles);
     }
 
     @When("send request post register customer invalid path")
     public void sendRequestPostRegisterCustomerInvalidPath() {
         SerenityRest.when()
-                .post(BengcallAPIUsers.POST_REGISTER_USER_INVALID_PATH);
+                .post(BengcallAPIUser.POST_REGISTER_USER_INVALID_PATH);
     }
 
     @And("Post register user with invalid path assert json validation")
     public void postRegisterUserWithInvalidPathAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -69,14 +69,14 @@ public class RegisterStepdefs {
 
     @Given("post register customer with one field mandatory is empty")
     public void postRegisterCustomerWithOneFieldMandatoryIsEmpty() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerOneField.json");
-        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Register/POSTRegisterUserOneField.json");
+        bengcallAPIUser.postRegisterCustomer(jsonFiles);
     }
 
     @Given("post register customer with two field mandatory is empty")
     public void postRegisterCustomerWithTwoFieldMandatoryIsEmpty() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTRegisterCustomerTwoField.json");
-        bengcallAPIUsers.postRegisterCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Register/POSTRegisterUserTwoField.json");
+        bengcallAPIUser.postRegisterCustomer(jsonFiles);
     }
 
     @And("Response body should contain fullname {string}, email {string}, message {string}")

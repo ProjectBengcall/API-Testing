@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "invoice": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "integer"
+        },
+        "payment_token": {
+          "type": "string"
+        },
+        "payment_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "invoice",
+        "total",
+        "status",
+        "payment_token",
+        "payment_link"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}

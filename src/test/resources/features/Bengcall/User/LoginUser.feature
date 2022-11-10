@@ -2,9 +2,9 @@ Feature: Login as Customer
   Scenario: Login customer with valid credentials
     Given post login customer with valid credentials
     When send request post login customer valid path
-    Then Api should return response 202 Accepted
+    Then Api should return response 202 Created
     And Post login customer success assert json validation
-    And Response body should contain message "Success to login", fullname "Roni", images "roni.png", role 0,  token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHBpcmVkIjoxNjY3NzQ4NTIzLCJpZCI6MTMsInJvbGUiOjB9.5xSTq8AN8oTvH6PN4zvEhjO4lSlLgj4Po6hm8ZtAdA8"
+    And Response body should contain message "Success to login", fullname "Andika", role 0
 
   Scenario: Login customer with invalid credentials (leave email field is empty)
     Given post Login customer with email field is empty

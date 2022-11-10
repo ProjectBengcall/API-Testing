@@ -4,9 +4,9 @@ Feature: Vehicles Customer
     When send request get vehicles valid path
     Then Api should return response 200 OK
     And Get vehicles assert json validation
-    And Response body should contain message "success get all vehicle", data pertama id 1, data pertama name "125cc revo"
+    And Response body should contain message "success get all vehicle", data pertama id 41, data pertama name "125cc - Revo"
 
-  Scenario: See all types of vehicles available to be serviced with expire token
+  Scenario: See all types of vehicles available to be serviced with expired token
     Given Get See all types of vehicles available to be serviced with expired token
     When send request get vehicles valid path
     Then Api should return response 401 Unauthorized

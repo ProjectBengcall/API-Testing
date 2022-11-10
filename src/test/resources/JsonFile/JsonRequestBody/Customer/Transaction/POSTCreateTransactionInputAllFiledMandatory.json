@@ -1,0 +1,13 @@
+{
+  "location": 2,
+  "date": "2022-11-21T08:16:01.8787593+07:00",
+  "phone": "0893151222",
+  "address": "Jl. Anggrek No. 29, Surabaya",
+  "detail": [
+    {
+      "vehicle_id": 1,
+      "service_id": 1,
+      "sub-total": 50000
+    }
+  ]
+}

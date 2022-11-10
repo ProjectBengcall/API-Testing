@@ -10,24 +10,24 @@ import net.thucydides.core.annotations.Steps;
 import java.io.File;
 import static org.hamcrest.Matchers.equalTo;
 
-public class LoginStepdefs {
+public class LoginUserStepdefs {
     @Steps
-    BengcallAPIUsers bengcallAPIUsers;
+    BengcallAPIUser bengcallAPIUser;
     @Given("post login customer with valid credentials")
     public void postLoginCustomerWithValidCredentials() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTLoginValidCustomer.json");
-        bengcallAPIUsers.postLoginCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Login/POSTLoginUserValidUser.json");
+        bengcallAPIUser.postLoginCustomer(jsonFiles);
     }
 
     @When("send request post login customer valid path")
     public void sendRequestPostLoginCustomerValidPath() {
         SerenityRest.when()
-                .post(BengcallAPIUsers.POST_LOGIN_USER_VALID_PATH);
+                .post(BengcallAPIUser.POST_LOGIN_USER_VALID_PATH);
     }
 
     @And("Post login customer success assert json validation")
     public void postLoginUserAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/PostLoginValidCustomerJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/Login/PostLoginValidUserJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
@@ -35,44 +35,41 @@ public class LoginStepdefs {
 
     @Given("post Login customer with email field is empty")
     public void postLoginCustomerWithEmailFieldIsEmpty() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTLoginInvalidEmailEmpty.json");
-        bengcallAPIUsers.postLoginCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Login/POSTLoginUserInvalidEmailEmpty.json");
+        bengcallAPIUser.postLoginCustomer(jsonFiles);
     }
 
     @Given("post Login customer with password field is empty")
     public void postLoginCustomerWithPasswordFieldIsEmpty() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTLoginInvalidPasswoedEmpty.json");
-        bengcallAPIUsers.postLoginCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Login/POSTLoginUserInvalidPasswordEmpty.json");
+        bengcallAPIUser.postLoginCustomer(jsonFiles);
     }
 
     @Given("post Login customer without credentials")
     public void postLoginCustomerWithoutCredentials() {
-        File jsonFiles = new File(BengcallAPIUsers.JSON_FILE+"/JsonRequestBody/Customer/POSTLoginWithoutCredentials.json");
-        bengcallAPIUsers.postLoginCustomer(jsonFiles);
+        File jsonFiles = new File(BengcallAPIUser.JSON_FILE+"/JsonRequestBody/Customer/Login/POSTLoginUserWithoutCredentials.json");
+        bengcallAPIUser.postLoginCustomer(jsonFiles);
     }
 
     @When("send request post login customer invalid path")
     public void sendRequestPostLoginCustomerInvalidPath() {
         SerenityRest.when()
-                .post(BengcallAPIUsers.POST_LOGIN_USER_INVALID_PATH);
+                .post(BengcallAPIUser.POST_LOGIN_USER_INVALID_PATH);
     }
 
     @And("response body failed assert json validation")
     public void responseBodyFailedAssertJsonValidation() {
-        File jsonFile = new File(BengcallAPIUsers.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
+        File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
     }
 
-    @And("Response body should contain message {string}, fullname {string}, images {string}, role {int},  token {string}")
-    public void responseBodyShouldContainMessageFullnameImagesRoleToken(String message, String fullname, String images, int role, String token) {
+    @And("Response body should contain message {string}, fullname {string}, role {int}")
+    public void responseBodyShouldContainMessageFullnameImagesRoleToken(String message, String fullname, int role) {
         SerenityRest.then()
                 .body(BengcallAPIResponseUser.MESSAGE,equalTo(message))
                 .body(BengcallAPIResponseUser.FULLNAME,equalTo(fullname))
-                .body(BengcallAPIResponseUser.IMAGES,equalTo(images))
-                .body(BengcallAPIResponseUser.ROLE, equalTo(role))
-                .body(BengcallAPIResponseUser.TOKEN, equalTo(token));
-
+                .body(BengcallAPIResponseUser.ROLE, equalTo(role));
     }
 }
