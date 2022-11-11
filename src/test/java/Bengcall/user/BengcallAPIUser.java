@@ -30,6 +30,8 @@ public class BengcallAPIUser {
     public static final String DETAIL_TRANSACTION_USER_INVALID_PATH = BASE_URL+"/transaction/meee";
     public static final String VEHICLE_SERVICE_VALID_PATH = BASE_URL+"/vehicleservice";
     public static final String VEHICLE_SERVICE_INVALID_PATH = BASE_URL+"/vehicleservices";
+    public static final String ONGOING_USER_TRANSACTION_USER_VALID_PATH = BASE_URL+"/transaction/{id}";
+    public static final String ONGOING_USER_TRANSACTION_USER_INVALID_PATH = BASE_URL+"/transactions/{id}";
     public static final String VALID_TOKEN ="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHBpcmVkIjoxNjY3ODAwMzUzLCJpZCI6MTMsInJvbGUiOjB9.OrhV5_xGREdSiNoEz244du2sOJjMh34Gx7xtuysyRb0";
     public static final String EXPIRED_TOKEN ="Bearer eyeeeerwJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHBpcmVkIjoxNjY3NzkyNzM2LCJpZCI6Miwicm9sZSI6MX0.bIdQ95WTl2ArvKn7RSptNgBBPZ08W2iPPJbxjefSRVE";
     public static final String TOKEN_ON_CUSTOMER_ACCOUNT_NOT_EXIST ="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHBpcmVkIjoxNjY3NzEyNjYxLCJpZCI6Nywicm9sZSI6MH0.BsCCA7kROz9yldDro-l-kjNP7RoF13l1-fyRbDWdeSA";
@@ -174,5 +176,23 @@ public class BengcallAPIUser {
     public void getVehicleServiceExpiredToken(){
         SerenityRest.given()
                 .header("Authorization",EXPIRED_TOKEN);
+    }
+    @Step("Get ongoing user transaction with valid id and valid token")
+    public void getOngoingUserTransactionValidIdAndValidToken(int id) {
+        SerenityRest.given()
+                .header("Authorization", VALID_TOKEN)
+                .pathParam("id", id);
+    }
+    @Step("Get ongoing user transaction with invalid id and valid token")
+    public void getOngoingUserTransactionInvalididAndValidToken(String id) {
+        SerenityRest.given()
+                .header("Authorization", VALID_TOKEN)
+                .pathParam("id", id);
+    }
+    @Step("Get ongoing user transaction with valid id and expired token")
+    public void getOngoingUserTransactionValidIdAndExpiredToken(int id) {
+        SerenityRest.given()
+                .header("Authorization", EXPIRED_TOKEN)
+                .pathParam("id", id);
     }
 }

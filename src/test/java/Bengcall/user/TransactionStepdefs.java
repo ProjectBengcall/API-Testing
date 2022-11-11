@@ -64,32 +64,32 @@ public class TransactionStepdefs {
         bengcallAPIUser.postCreateNewTransactionWithValidToken(jsonFiles);
     }
 
-    @Given("Get user's transaction with valid token")
+    @Given("Get ongoing user transaction with valid token")
     public void getUserSTransactionWithValidToken() {
         bengcallAPIUser.getDetailTransactionValidToken();
     }
 
-    @When("send request get detail transaction valid path")
+    @When("send request get ongoing user transaction valid path")
     public void sendRequestGetDetailTransactionValidPath() {
         SerenityRest.when()
                 .get(BengcallAPIUser.DETAIL_TRANSACTION_USER_VALID_PATH);
     }
 
-    @And("Get detail transaction assert json validation")
-    public void getDetailTransactionAssertJsonValidation() {
+    @And("Get ongoing user transaction assert json validation")
+    public void getOngoingTransactionTransactionAssertJsonValidation() {
         File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/Transaction/GetDetailTransactionJsonSchemaValidation.json");
         SerenityRest.then()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
     }
 
-    @When("send request get detail transaction invalid path")
+    @When("send request get ongoing user transaction invalid path")
     public void sendRequestGetDetailTransactionInvalidPath() {
         SerenityRest.when()
                 .get(BengcallAPIUser.DETAIL_TRANSACTION_USER_INVALID_PATH);
     }
 
-    @Given("Get user's transaction with expired token")
+    @Given("Get ongoing user transaction with expired token")
     public void getUserSTransactionWithExpiredToken() {
         bengcallAPIUser.getDetailTransactionExpiredToken();
     }
@@ -98,5 +98,40 @@ public class TransactionStepdefs {
     public void responseBodyValidCredentialsShouldContainMessage(String message) {
         SerenityRest.then()
                 .body(BengcallAPIResponseUser.MESSAGE,equalTo(message));
+    }
+
+    @Given("Get detail user's transaction with id {int} and valid token")
+    public void getDetailUserSTransactionWithValidId(int id) {
+        bengcallAPIUser.getOngoingUserTransactionValidIdAndValidToken(id);
+    }
+
+    @When("send requeat get detail transaction with valid path")
+    public void sendRequeatGetDetailTransactionWithValidPath() {
+        SerenityRest.when()
+                .get(BengcallAPIUser.ONGOING_USER_TRANSACTION_USER_VALID_PATH);
+    }
+
+    @And("Get detail transaction assert json validation")
+    public void getDetailTransactionAssertJsonValidation() {
+        File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/Transaction/GetOngoingUserTransactionJsonSchemaValidation.json");
+        SerenityRest.then()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
+    }
+
+    @Given("Get detail user's transaction with invalid id {string} and valid token")
+    public void getDetailUserSTransactionWithInvalidId(String id) {
+        bengcallAPIUser.getOngoingUserTransactionInvalididAndValidToken(id);
+    }
+
+    @When("send requeat get detail transaction with invalid path")
+    public void sendRequeatGetDetailTransactionWithInvalidPath() {
+        SerenityRest.when()
+                .get(BengcallAPIUser.ONGOING_USER_TRANSACTION_USER_INVALID_PATH);
+    }
+
+    @Given("Get detail user's transaction with id {int} and expired token")
+    public void getDetailUserSTransactionWithIdAndExpiredToken(int id) {
+        bengcallAPIUser.getOngoingUserTransactionValidIdAndExpiredToken(id);
     }
 }

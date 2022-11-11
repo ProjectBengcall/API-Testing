@@ -41,25 +41,62 @@ Feature: Transaction user
     And response body failed assert json validation
     And Response body invalid credentials should contain message "cannot bind input"
 
-  Scenario: See user's detail transaction with valid token
-    Given Get user's transaction with valid token
-    When send request get detail transaction valid path
+  Scenario: See ongoing user transaction with valid token
+    Given Get ongoing user transaction with valid token
+    When send request get ongoing user transaction valid path
     Then Api should return response 200 OK
-    And Get detail transaction assert json validation
+    And Get ongoing user transaction assert json validation
     And Response body success should contain message "Success get my transaction"
 
-  Scenario: See all service history with invalid path
-    Given Get user's transaction with valid token
-    When send request get detail transaction invalid path
+  Scenario: See ongoing user transaction with invalid path
+    Given Get ongoing user transaction with valid token
+    When send request get ongoing user transaction invalid path
     Then Api should return response 404 Not Found
     And response body failed assert json validation
     And Response body invalid path should contain message "Not Found"
 
-  Scenario: See all service history with expired token
-    Given Get user's transaction with expired token
-    When send request get detail transaction valid path
+  Scenario: See ongoing user transaction with invalid token
+    Given Get ongoing user transaction with expired token
+    When send request get ongoing user transaction valid path
     Then Api should return response 401 Unauthorized
     And response body failed assert json validation
     And Response body invalid credentials should contain message "invalid or expired jwt"
+
+  Scenario: See detail user's transaction with valid id
+    Given Get detail user's transaction with id 1 and valid token
+    When send requeat get detail transaction with valid path
+    Then Api should return response 200 OK
+    And Get detail transaction assert json validation
+    And Response body success should contain message "Success get detail transaction data"
+
+  Scenario: See detail user's transaction with id does not exist
+    Given Get detail user's transaction with id 3194 and valid token
+    When send requeat get detail transaction with valid path
+    Then Api should return response 404 Not Found
+    And response body failed assert json validation
+    And Response body invalid path should contain message "Not Found"
+
+  Scenario: See detail user's transaction with invalid id (combine string, numeric, and special character)
+    Given Get detail user's transaction with invalid id "2d@" and valid token
+    When send requeat get detail transaction with valid path
+    Then Api should return response 404 Not Found
+    And response body failed assert json validation
+    And Response body invalid path should contain message "Not Found"
+
+  Scenario: See detail user's transaction with invalid path
+    Given Get detail user's transaction with id 1 and valid token
+    When send requeat get detail transaction with invalid path
+    Then Api should return response 404 Not Found
+    And response body failed assert json validation
+    And Response body invalid path should contain message "Not Found"
+
+  Scenario: See detail user's transaction with expired token
+    Given Get detail user's transaction with id 3 and expired token
+    When send requeat get detail transaction with valid path
+    Then Api should return response 401 Unauthorized
+    And response body failed assert json validation
+    And Response body invalid credentials should contain message "invalid or expired jwt"
+
+
 
 

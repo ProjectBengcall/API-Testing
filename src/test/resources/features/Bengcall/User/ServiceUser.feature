@@ -9,16 +9,16 @@ Feature: See available service type on one vehicle
   Scenario: See all service type with invalid id (string/special Character/numeric)
     Given Get see avalaible services with invalid id vehicle "2w@"
     When send request get services type customer with valid path
-    Then Api should return response 404 Not Found
+    Then Api should return response 500 Internal Server Error
     And response body failed assert json validation
-    And Response body invalid path should contain message "Not Found"
+    And Response body invalid path should contain message "id not valid"
 
   Scenario:  See all service type with id vehicle does not exist
     Given Get see avalaible services with valid id vehicle does not exist 3314
     When send request get services type customer with valid path
-    Then Api should return response 404 Not Found
+    Then Api should return response 500 Internal Server Error
     And response body failed assert json validation
-    And Response body invalid path should contain message "Not Found"
+    And Response body invalid path should contain message "There's no ID"
 
   Scenario: See all service type with invalid path
     Given Get see avalaible services with valid id vehicle 1
