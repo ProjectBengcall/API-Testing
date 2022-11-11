@@ -33,9 +33,16 @@ public class StatusCode {
         SerenityRest.then()
                 .statusCode(notFound);
     }
+    
     @Then("Api should return response {int} Unauthorized")
     public void apiShouldReturnResponseUnauthorized(int unauthorized) {
         SerenityRest.then()
                 .statusCode(unauthorized);
+    }
+    
+    @Then("Api should return response {int} Internal Server Error")
+    public void apiShouldReturnResponseInternalServerError(int internalServerError) {
+        SerenityRest.then()
+                .statusCode(internalServerError);
     }
 }
