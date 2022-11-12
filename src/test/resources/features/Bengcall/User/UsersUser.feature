@@ -48,7 +48,7 @@ Feature: Customer Profile
   Scenario: PUT Update Customer profile with password less than 8 characters
     Given Update customer profile with password less than 8 characters
     When send request put customer profile valid path
-    Then Api should return response 400 Bad Request
+    Then Api should return response 500 Internal Server Error
     And response body failed assert json validation
     And Response body invalid path should contain message "invalid password"
 
@@ -57,7 +57,7 @@ Feature: Customer Profile
     When send request put customer profile valid path
     Then Api should return response 400 Bad Request
     And response body failed assert json validation
-    And Response body invalid path should contain message "Unsuccess update user"
+    And Response body invalid path should contain message "please insert one field"
 
   Scenario: DELETE Customer account with valid token
     Given Deactivate customer account with valid token
@@ -83,9 +83,9 @@ Feature: Customer Profile
   Scenario: DELETE Customer account on customer account is already delete
     Given Deactivate customer account on customer account is already delete
     When send request delete customer profile valid path
-    Then Api should return response 404 Not Found
+    Then Api should return response 400 Bad Request
     And Delete customer accound assert json validation
-    And Response body invalid path should contain message "Not Found"
+    And Response body invalid path should contain message "not found"
 
 
 

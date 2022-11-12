@@ -23,9 +23,9 @@ Feature: Create comment for a service that has been completed
   Scenario: Create comment for a service that has been completed with id does not exist
     Given Create comment service with input id 4151 and comment "kurang baik servisnya" and valid token
     When send request post comment with valid path
-    Then Api should return response 404 Not Found
+    Then Api should return response 500 Internal Server Error
     And response body failed assert json validation
-    And response body message "Not Found"
+    And response body message "There's no ID"
 
   Scenario: Create comment for a service that has been completed with expired token
     Given Create comment service with input id 7 and comment "kurang baik servisnya" and expired token
@@ -38,15 +38,15 @@ Feature: Create comment for a service that has been completed
     Given Create comment service with input id 6 and comment "" and valid token
     When send request post comment with valid path
     Then Api should return response 400 Bad Request
-    And Put comment assert json validation
-    And response body message "Unsuccess add comment"
+    And response body failed assert json validation
+    And response body message "input empty"
 
   Scenario: Create comment for a service that has been completed with invalid id (combine string, special character, numeric)
     Given Create comment service with input id "2d@" and comment "servis bagus sekali" and valid token
     When send request post comment with valid path
-    Then Api should return response 400 Bad Request
-    And Put comment assert json validation
-    And response body message "Unsuccess add comment"
+    Then Api should return response 500 Internal Server Error
+    And response body failed assert json validation
+    And response body message "id not valid"
 
 
 
