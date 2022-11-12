@@ -14,7 +14,7 @@
 
 ## 📑 About the Project
 
-<p align="justify">Bengcall is an inovation software that very useful when someone need mechanic to repair their motorcycle fast and no waitng too long. In order to make sure Bengcall works well and following the requirements, we as Quality Engineers do sort of test to make sure all is fine. This repository is focusing on API testing and in this testing, we separated the testing into manual and automation test. We also perform testing base on roles in bengcall; customer api and user api Ben.</p>
+<p align="justify">Bengcall is an inovation software that very useful when someone need mechanic to repair their motorcycle fast and no waitng too long. In order to make sure Bengcall works well and following the requirements, we as Quality Engineers do sort of test to make sure all is fine. This repository is focusing on API testing and in this testing, we separated the testing into manual and automation test. We also perform testing base on roles in bengcall; customer API and user API.</p>
 
 ## 📓 Testing Documentation
 [Test Case API](https://docs.google.com/spreadsheets/d/1PiTyEaUEnev3VWnekC4_H_NPv4qrIAJJvtHs6haPhmU/edit?usp=sharing)
