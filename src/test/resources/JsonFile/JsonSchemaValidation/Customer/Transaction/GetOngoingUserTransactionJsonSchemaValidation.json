@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "location": {
+          "type": "integer"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "invoice": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "payment_token": {
+          "type": "string"
+        },
+        "payment_link": {
+          "type": "string"
+        },
+        "other": {
+          "type": "string"
+        },
+        "additional": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "integer"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "location",
+        "fullname",
+        "date",
+        "phone",
+        "address",
+        "invoice",
+        "total",
+        "payment_token",
+        "payment_link",
+        "other",
+        "additional",
+        "status",
+        "comment",
+        "detail"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}

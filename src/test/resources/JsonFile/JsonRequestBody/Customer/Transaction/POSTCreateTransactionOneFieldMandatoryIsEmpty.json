@@ -1,0 +1,13 @@
+{
+  "location": "",
+  "date": "2022-11-16T08:16:01.8787593+07:00",
+  "phone": "0854212194",
+  "address": "Jl. Sudirman No. 15, Surabaya",
+  "detail": [
+    {
+      "vehicle_id": 1,
+      "service_id": 1,
+      "sub-total": 50000
+    }
+  ]
+}
