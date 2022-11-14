@@ -48,11 +48,11 @@
 ![Serenity](https://img.shields.io/badge/-serenity-16a67a?style=for-the-badge&logo=serenity&logoColor=black)
 ![Cucumber](https://img.shields.io/badge/-cucumber-4bc47b?style=for-the-badge&logo=cucumber&logoColor=black)
 
-**Test Case Management:**
+**Test Case Management:**  
 
 ![Google Sheets](https://img.shields.io/badge/-Google%20sheets-4bc47b?style=for-the-badge&logoColor=black)
 
-**Communication:**
+**Communication:**  
 
 ![GitHub](https://img.shields.io/badge/github%20Project-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)
@@ -60,17 +60,17 @@
 
 ## 📱 Our teams
 
-[![LinkedIn](https://img.shields.io/badge/-Luqman%20Hanung%20Asidiq-white?style=for-the-badge&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/luqman-hanung-asidiq/)
-[![GitHub](https://img.shields.io/badge/-Luqmanhanung-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/Luqmanhanung])
+  [![LinkedIn](https://img.shields.io/badge/-Luqman%20Hanung%20Asidiq-white?style=for-the-badge&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/luqman-hanung-asidiq/)
+  [![GitHub](https://img.shields.io/badge/-Luqmanhanung-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/Luqmanhanung])
 
-[![LinkedIn](https://img.shields.io/badge/-Rahdian%20Abdi-white?style=for-the-badge&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/rahdianabdi/)
-[![GitHub](https://img.shields.io/badge/-rahdianabdi-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/rahdian-abdi])
+  [![LinkedIn](https://img.shields.io/badge/-Rahdian%20Abdi-white?style=for-the-badge&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/rahdianabdi/)
+  [![GitHub](https://img.shields.io/badge/-rahdianabdi-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/rahdian-abdi])
 
-[![LinkedIn](https://img.shields.io/badge/-Panji%20Eka%20Sukmana-white?style=for-the-badge&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/panji-eka-sukmana-3b478512b/)
-[![GitHub](https://img.shields.io/badge/-panjiekasukmana-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/panjiekasukmana])
+  [![LinkedIn](https://img.shields.io/badge/-Panji%20Eka%20Sukmana-white?style=for-the-badge&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/panji-eka-sukmana-3b478512b/)
+  [![GitHub](https://img.shields.io/badge/-panjiekasukmana-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/panjiekasukmana])
 
-[![LinkedIn](https://img.shields.io/badge/-Riovaldo%20Todoan%20Sihombing-white?style=for-the-badge&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/todoantodoan/)
-[![GitHub](https://img.shields.io/badge/-eltodoan-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/eltodoan])
+  [![LinkedIn](https://img.shields.io/badge/-Riovaldo%20Todoan%20Sihombing-white?style=for-the-badge&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/todoantodoan/)
+  [![GitHub](https://img.shields.io/badge/-eltodoan-white?style=for-the-badge&logo=github&logoColor=black)]([https://github.com/eltodoan])
 
 <h5>
 <p align="center">:copyright: 2022 | This Repository Built with :heart: from us</p>
