@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "payment_token": {
+          "type": "string"
+        },
+        "payment_link": {
+          "type": "string"
+        },
+        "status": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "payment_token",
+        "payment_link",
+        "status"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}
