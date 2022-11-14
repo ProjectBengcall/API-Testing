@@ -1,0 +1,886 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "invoice": {
+              "type": "integer"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "invoice",
+            "fullname",
+            "date",
+            "total",
+            "status"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message"
+  ]
+}
