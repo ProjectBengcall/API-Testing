@@ -1,3 +1,4 @@
+@User
 Feature: See the services available on a vehicle
   Scenario: See the services available on a vehicle with valid token
     Given Get all service on a vehicle with valid token
