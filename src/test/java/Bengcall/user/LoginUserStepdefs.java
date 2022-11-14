@@ -57,7 +57,7 @@ public class LoginUserStepdefs {
                 .post(BengcallAPIUser.POST_LOGIN_USER_INVALID_PATH);
     }
 
-    @And("response body failed assert json validation")
+    @And("response body failedd assert json validation")
     public void responseBodyFailedAssertJsonValidation() {
         File jsonFile = new File(BengcallAPIUser.JSON_FILE+"/JsonSchemaValidation/Customer/ErrorMessageJsonSchemaValidation.json");
         SerenityRest.then()

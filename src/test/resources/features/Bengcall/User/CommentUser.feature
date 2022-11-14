@@ -16,7 +16,7 @@ Feature: Create comment for a service that has been completed
     Given Create comment service with input id 4151 and comment "kurang baik servisnya" and valid token
     When send request post comment with valid path
     Then Api should return response 500 Internal Server Error
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And response body message "There's no ID"
 
   #API_BC_50
@@ -24,7 +24,7 @@ Feature: Create comment for a service that has been completed
     Given Create comment service with input id 7 and comment "kurang baik servisnya" and expired token
     When send request post comment with valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And response body message "invalid or expired jwt"
 
   #API_BC_51
@@ -32,7 +32,7 @@ Feature: Create comment for a service that has been completed
     Given Create comment service with input id "2d@" and comment "servis bagus sekali" and valid token
     When send request post comment with valid path
     Then Api should return response 500 Internal Server Error
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And response body message "id not valid"
 
   #API_BC_52
@@ -40,7 +40,7 @@ Feature: Create comment for a service that has been completed
     Given Create comment service with input id <id> and comment "<comment>" and valid token
     When send request post comment with invalid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And response body message "Not Found"
   Examples:
       | id | comment |
@@ -52,7 +52,7 @@ Feature: Create comment for a service that has been completed
     Given Create comment service with input id 6 and comment "" and valid token
     When send request post comment with valid path
     Then Api should return response 400 Bad Request
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And response body message "input empty"
 
 

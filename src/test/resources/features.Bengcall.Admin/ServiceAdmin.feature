@@ -16,7 +16,7 @@ Feature: Service admin on Bengcall
   Scenario Outline: Get all service information type on admin with invalid id using special character
     Given Set view all service information type on admin with special character on path <character>
     When  Send request get all service information on admin with special character id
-    Then  Api should return response 500 internal server error
+    Then  Api should return response 500 Internal Server Error
     And   Get all service information on admin invalid id assert json validation
     And   Get all service information on admin response contain id not valid
     Examples:
@@ -91,7 +91,7 @@ Feature: Service admin on Bengcall
   Scenario Outline: Delete service type on admin using special character
     Given Set delete service type on admin with special character <character>
     When  Send request delete service type special character
-    Then  Api should return response 500 internal server error
+    Then  Api should return response 500 Internal Server Error
     And   Delete service on admin assert json validation
     And   Delete service on admin response contain id not valid
     Examples:

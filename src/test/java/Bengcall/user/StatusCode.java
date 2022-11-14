@@ -45,4 +45,9 @@ public class StatusCode {
         SerenityRest.then()
                 .statusCode(internalServerError);
     }
+    @Then("Api should return response {int} Method Not Allowed")
+    public void apiShouldReturnResponseIntMethodNotAllowed(int Method_Not_Allowed) {
+        SerenityRest
+                .then()
+                .statusCode(Method_Not_Allowed);}
 }

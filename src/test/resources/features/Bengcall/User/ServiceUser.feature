@@ -13,7 +13,7 @@ Feature: See available service type on one vehicle
     Given Get see avalaible services with valid id vehicle does not exist 3314
     When send request get services type customer with valid path
     Then Api should return response 500 Internal Server Error
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "There's no ID"
 
   #API_BC_42
@@ -21,7 +21,7 @@ Feature: See available service type on one vehicle
     Given Get see avalaible services with invalid id vehicle "2w@"
     When send request get services type customer with valid path
     Then Api should return response 500 Internal Server Error
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "id not valid"
 
   #API_BC_43
@@ -29,7 +29,7 @@ Feature: See available service type on one vehicle
     Given Get see avalaible services with valid id vehicle 1
     When send request get services type customer with invalid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "Not Found"
 
   #API_BC_44
@@ -37,6 +37,6 @@ Feature: See available service type on one vehicle
     Given Get see avalaible services with valid id vehicle 3 and expired token
     When send request get services type customer with valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "invalid or expired jwt"
 

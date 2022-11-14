@@ -13,7 +13,7 @@ Feature: Customer Profile
     Given Get a customer profile with expired token
     When send request get customer profile valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "invalid or expired jwt"
 
   #API_BC_16
@@ -21,7 +21,7 @@ Feature: Customer Profile
     Given Get a customer profile with valid token
     When send request get customer profile invalid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "Not Found"
 
   #API_BC_17
@@ -41,7 +41,7 @@ Feature: Customer Profile
     Given Update a customer profile with expired token
     When send request put customer profile valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "invalid or expired jwt"
 
   #API_BC_19
@@ -49,7 +49,7 @@ Feature: Customer Profile
     Given Update customer profile with valid token and input fullname "Tomi Prasetyo", email "tomipras@gmail.com", password "tomigreat112" and image
     When send request put customer profile invalid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "Not Found"
 
   #API_BC_20
@@ -57,7 +57,7 @@ Feature: Customer Profile
     Given Update customer profile with password less than 8 characters
     When send request put customer profile valid path
     Then Api should return response 500 Internal Server Error
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "invalid password"
 
   #API_BC_21
@@ -65,7 +65,7 @@ Feature: Customer Profile
     Given Update customer profile without input all mandatory field
     When send request put customer profile valid path
     Then Api should return response 400 Bad Request
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "please insert one field"
 
   #API_BC_22
@@ -81,7 +81,7 @@ Feature: Customer Profile
     Given Deactivate customer account with invalid token
     When send request delete customer profile valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "invalid or expired jwt"
 
   #API_BC_24
@@ -89,7 +89,7 @@ Feature: Customer Profile
     Given Deactivate customer account with valid token
     When send request delete customer profile invalid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "Not Found"
 
   #API_BC_25

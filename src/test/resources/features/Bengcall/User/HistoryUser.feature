@@ -13,7 +13,7 @@ Feature: See History of user's transaction
     Given Get all service history with valid token
     When send request get all service history invalid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And response body message "Not Found"
 
   #API_BC_47
@@ -21,5 +21,5 @@ Feature: See History of user's transaction
     Given Get all service history with expired token
     When send request get all service history valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And response body message "invalid or expired jwt"

@@ -13,7 +13,7 @@ Feature: Transaction user
     Given Post create new transaction with input all field mandatory and expired token
     When send request post create transaction with valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "invalid or expired jwt"
 
   #API_BC_28
@@ -21,7 +21,7 @@ Feature: Transaction user
     Given Post create new transaction without input all field mandatory
     When send request post create transaction with valid path
     Then Api should return response 400 Bad Request
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "cannot bind input"
 
   #API_BC_29
@@ -29,7 +29,7 @@ Feature: Transaction user
     Given Post create new transaction with one field mandatory is empty
     When send request post create transaction with valid path
     Then Api should return response 400 Bad Request
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "cannot bind input"
 
   #API_BC_30
@@ -37,7 +37,7 @@ Feature: Transaction user
     Given Post create new transaction with two field mandatory is empty
     When send request post create transaction with valid path
     Then Api should return response 400 Bad Request
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "cannot bind input"
 
   #API_BC_31
@@ -45,7 +45,7 @@ Feature: Transaction user
     Given Post create new transaction with three field mandatory is empty
     When send request post create transaction with valid path
     Then Api should return response 400 Bad Request
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "cannot bind input"
 
   #API_BC_32
@@ -61,7 +61,7 @@ Feature: Transaction user
     Given Get ongoing user transaction with valid token
     When send request get ongoing user transaction invalid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "Not Found"
 
   #API_BC_34
@@ -69,7 +69,7 @@ Feature: Transaction user
     Given Get ongoing user transaction with expired token
     When send request get ongoing user transaction valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "invalid or expired jwt"
 
   #API_BC_35
@@ -85,7 +85,7 @@ Feature: Transaction user
     Given Get detail user's transaction with id 3194 and valid token
     When send requeat get detail transaction with valid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "Not Found"
 
   #API_BC_37
@@ -93,7 +93,7 @@ Feature: Transaction user
     Given Get detail user's transaction with invalid id "2d@" and valid token
     When send requeat get detail transaction with valid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "Not Found"
 
   #API_BC_38
@@ -101,7 +101,7 @@ Feature: Transaction user
     Given Get detail user's transaction with id 1 and valid token
     When send requeat get detail transaction with invalid path
     Then Api should return response 404 Not Found
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid path should contain message "Not Found"
 
   #API_BC_39
@@ -109,7 +109,7 @@ Feature: Transaction user
     Given Get detail user's transaction with id 3 and expired token
     When send requeat get detail transaction with valid path
     Then Api should return response 401 Unauthorized
-    And response body failed assert json validation
+    And response body failedd assert json validation
     And Response body invalid credentials should contain message "invalid or expired jwt"
 
 

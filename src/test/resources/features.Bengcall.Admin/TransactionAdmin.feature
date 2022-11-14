@@ -72,7 +72,7 @@ Feature: Transaction Admin on Bengcall
   Scenario: Update transaction data in admin with invalid id special character
     Given Set update transaction data on admin with invalid id special character HAHA
     When  Send request update transaction data on admin with invalid id
-    Then  Api should return response 500 internal server error
+    Then  Api should return response 500 Internal Server Error
     And   Update transaction invalid data on admin assert json validation
     And   Update transaction invalid data on admin response contain id not valid
 
@@ -112,7 +112,7 @@ Feature: Transaction Admin on Bengcall
   Scenario: Cancel transaction on admin with special character id
     Given Cancel transaction on admin with special character id @#$
     When  Send request cancel transaction data on admin
-    Then  Api should return response 500 internal server error
+    Then  Api should return response 500 Internal Server Error
     And   Cancel transaction on admin assert json validation
     And   Cancel transaction on admin response contain id not valid
 
