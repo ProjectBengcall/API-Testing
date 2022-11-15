@@ -63,7 +63,7 @@ Go to the project directory
 ```bash
   cd API-Testing
 ```
-Open Intellij IDE and open the terminal
+Open  this Project Repository on Intellij IDE and open the terminal
 
 ```bash
   mvn clean verify
