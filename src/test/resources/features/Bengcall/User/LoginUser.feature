@@ -1,6 +1,7 @@
 @User
 Feature: Login as Customer
   #API_BC_8
+  @demo
   Scenario: Login customer with valid credentials
     Given post login customer with valid credentials
     When send request post login customer valid path
@@ -9,6 +10,7 @@ Feature: Login as Customer
     And Response body should contain message "Success to login", fullname "Luqman Hanung Asidiq", role 0
 
   #API_BC_9
+
   Scenario: Login customer with invalid credentials (leave email field is empty)
     Given post Login customer with email field is empty
     When send request post login customer valid path

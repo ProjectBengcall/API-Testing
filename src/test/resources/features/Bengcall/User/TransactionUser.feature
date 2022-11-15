@@ -1,6 +1,7 @@
 @User
 Feature: Transaction user
   #API_BC_26
+
   Scenario: Create new transaction with input all field mandatory
     Given Post create new transaction with input all field mandatory
     When send request post create transaction with valid path
@@ -9,6 +10,7 @@ Feature: Transaction user
     And Response body success should contain message "Success creating new service"
 
   #API_BC_27
+  @demo
   Scenario: Create new transaction with input all field mandatory and expired token
     Given Post create new transaction with input all field mandatory and expired token
     When send request post create transaction with valid path
@@ -36,17 +38,17 @@ Feature: Transaction user
   Scenario: Create new transaction with two field mandatory is empty
     Given Post create new transaction with two field mandatory is empty
     When send request post create transaction with valid path
-    Then Api should return response 400 Bad Request
+    Then Api should return response 500 Internal Server Error
     And response body failedd assert json validation
-    And Response body invalid credentials should contain message "cannot bind input"
+    And Response body invalid credentials should contain message "some problem on database"
 
   #API_BC_31
   Scenario: Create new transaction with three field mandatory is empty
     Given Post create new transaction with three field mandatory is empty
     When send request post create transaction with valid path
-    Then Api should return response 400 Bad Request
+    Then Api should return response 500 Internal Server Error
     And response body failedd assert json validation
-    And Response body invalid credentials should contain message "cannot bind input"
+    And Response body invalid credentials should contain message "some problem on database"
 
   #API_BC_32
   Scenario: See ongoing user transaction with valid token
@@ -82,7 +84,7 @@ Feature: Transaction user
 
   #API_BC_36
   Scenario: See detail user's transaction with id does not exist
-    Given Get detail user's transaction with id 3194 and valid token
+    Given Get detail user's transaction with id 3195 and valid token
     When send requeat get detail transaction with valid path
     Then Api should return response 404 Not Found
     And response body failedd assert json validation
@@ -90,7 +92,7 @@ Feature: Transaction user
 
   #API_BC_37
   Scenario: See detail user's transaction with invalid id (combine string, numeric, and special character)
-    Given Get detail user's transaction with invalid id "2d@" and valid token
+    Given Get detail user's transaction with invalid id "3g@" and valid token
     When send requeat get detail transaction with valid path
     Then Api should return response 404 Not Found
     And response body failedd assert json validation

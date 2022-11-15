@@ -1,14 +1,16 @@
 @User
-Feature: Customer Profile
+Feature: User Profile
   #API_BC_14
+  @demo
   Scenario: GET a customer profile with valid token
     Given Get a customer profile with valid token
     When send request get customer profile valid path
     Then Api should return response 200 OK
     And Get customer profile assert json validation
-    And Response body should contain message "success get my profile", id 7 fullname "Ria", images "ria.png", email "Ria@gmail.com"
+    And Response body should contain message "success get my profile", fullname "Luqman Hanung Asidiq", images "https://bengcallbucket.s3.ap-southeast-1.amazonaws.com/profile/Q5aWl5c2RKoHcIFIrbMi-dummy450x450.jpg", email "luqmanhanung@gmail.com"
 
   #API_BC_15
+
   Scenario: GET a customer profile with expired token
     Given Get a customer profile with expired token
     When send request get customer profile valid path
@@ -33,7 +35,7 @@ Feature: Customer Profile
     And Response body should contain message "success update user", fullname "<fullname>", email "<email>"
   Examples:
     | fullname | email | password |
-    | Tomi     | tomi@gmail.com | tomitomi1 |
+    | Luqman Hanung Asidiq | luqmanhanung@gmail.com | qwerty123 |
 
 
   #API_BC_18
@@ -74,7 +76,7 @@ Feature: Customer Profile
     When send request delete customer profile valid path
     Then Api should return response 202 Accepted
     And Delete customer accound assert json validation
-    And Response body delete account should contain message "success deactivate account"
+    And Response body delete account should contain message "Success deactivate account"
 
   #API_BC_23
   Scenario: DELETE customer account with expired token

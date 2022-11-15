@@ -5,10 +5,11 @@ Feature: Register new customer account
     Given post register customer with valid credential
     When send request post register customer valid path
     Then Api should return response 201 Created
-    And Response body should contain fullname "Rival", email "rival@gmail.com", message "Success create new user"
+    And Response body should contain fullname "Putri", email "putri@gmail.com", message "Success create new user"
     And Post register customer assert json validation
 
   #API_BC_2
+  @demo
   Scenario: Register new customer with password less than 8 characters
     Given post register customer with invalid password less than 8 characters
     When send request post register customer valid path

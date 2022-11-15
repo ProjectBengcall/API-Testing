@@ -2,6 +2,7 @@
 Feature: Login Admin on Bengcall
 
   #[API_BC_57]
+  @demo
   Scenario: Admin login with valid credentials
    Given Admin login with valid request data
    When  Send request admin login
@@ -10,6 +11,7 @@ Feature: Login Admin on Bengcall
    And   Post admin login valid credentials response should contain fullname Admin Bengcall role 1 and message Success to login
 
   #[API_BC_58]
+
   Scenario: Admin login with invalid credentials using unregistered email and password
     Given Admin login with invalid request data
     When  Send request admin login

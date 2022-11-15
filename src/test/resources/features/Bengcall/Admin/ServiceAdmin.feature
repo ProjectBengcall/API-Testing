@@ -2,6 +2,7 @@
 Feature: Service admin on Bengcall
 
   #[API_BC_88]
+  @demo
   Scenario Outline: Get view all service information type on admin with valid id
     Given Set view all service information type on admin with valid token and id <id>
     When  Send request get all service information on admin
@@ -13,6 +14,7 @@ Feature: Service admin on Bengcall
     |2 |
 
     #[API_BC_89]
+
   Scenario Outline: Get all service information type on admin with invalid id using special character
     Given Set view all service information type on admin with special character on path <character>
     When  Send request get all service information on admin with special character id

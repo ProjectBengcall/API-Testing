@@ -2,6 +2,7 @@
 Feature: See the services available on a vehicle
 
   #[API_BC_98]
+  @demo
   Scenario: See the services available on a vehicle with valid token
     Given Get all service on a vehicle with valid token
     When  send request get all service on a vehicle with valid path
@@ -10,6 +11,7 @@ Feature: See the services available on a vehicle
     And   Response body success should contain message success get all vehicle + service
 
   #[API_BC_99]
+
   Scenario: See the services available on a vehicle with invalid token
     Given Get all service on a vehicle with invalid token
     When  send request get all service on a vehicle with valid path

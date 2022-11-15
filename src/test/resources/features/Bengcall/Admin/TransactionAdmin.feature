@@ -2,6 +2,7 @@
 Feature: Transaction Admin on Bengcall
 
   #[API_BC_63]
+  @demo
   Scenario: Get detail transaction data on admin with valid id
     Given Get detail transaction data on admin with valid id 3
     When  Send request get detail transaction on admin
@@ -10,6 +11,7 @@ Feature: Transaction Admin on Bengcall
     And   Get detail transaction data on admin response contain Success get detail transaction data
 
   #[API_BC_64]
+
   Scenario: Get detail transaction data on admin with invalid path
     Given Get detail transaction data on admin with token
     When  Send request get detail transaction on admin with invalid path

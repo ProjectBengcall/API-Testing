@@ -1,6 +1,7 @@
 @User
 Feature: See available service type on one vehicle
   #API_BC_40
+  @demo
   Scenario: See all service type with valid id vehicle
     Given Get see avalaible services with valid id vehicle 3
     When send request get services type customer with valid path
@@ -9,6 +10,7 @@ Feature: See available service type on one vehicle
     And Response body should contain message "Success get spesific service type", id 3, service name "Ganti Velg", price 1900000, vehicle id 3
 
   #API_BC_41
+
   Scenario:  See all service type with id vehicle does not exist
     Given Get see avalaible services with valid id vehicle does not exist 3314
     When send request get services type customer with valid path

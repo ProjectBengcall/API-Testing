@@ -1,6 +1,7 @@
 @User
-Feature: See History of user's transaction
+Feature: History of user's transaction
   #API_BC_45
+  @demo
   Scenario: See all service history on user transactions with valid token
     Given Get all service history with valid token
     When send request get all service history valid path
@@ -9,6 +10,7 @@ Feature: See History of user's transaction
     And response body message "Success get all transaction data"
 
   #API_BC_46
+
   Scenario: See all service history on user transactions with invalid path
     Given Get all service history with valid token
     When send request get all service history invalid path

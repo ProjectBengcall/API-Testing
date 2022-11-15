@@ -184,15 +184,14 @@ public class UsersUserStepdefs {
 //                .then().statusCode(201);
 //    }
 
-    @And("Response body should contain message {string}, id {int} fullname {string}, images {string}, email {string}")
-    public void responseBodyShouldContainMessageIdFullnameImagesEmail(String message, int id, String fullname, String images, String email) {
-        SerenityRest.then()
-                .body(BengcallAPIResponseUser.MESSAGE, equalTo(message))
-                .body(BengcallAPIResponseUser.ID,equalTo(id))
-                .body(BengcallAPIResponseUser.FULLNAME, equalTo(fullname))
-                .body(BengcallAPIResponseUser.IMAGES, equalTo(images))
-                .body(BengcallAPIResponseUser.EMAIL, equalTo(email));
-    }
+//    @And("Response body should contain message {string}, fullname {string}, images {string}, email {string}")
+//    public void responseBodyShouldContainMessageFullnameImagesEmail(String message, String fullname, String images, String email) {
+//        SerenityRest.then()
+//                .body(BengcallAPIResponseUser.MESSAGE, equalTo(message))
+//                .body(BengcallAPIResponseUser.FULLNAME, equalTo(fullname))
+//                .body(BengcallAPIResponseUser.IMAGES, equalTo(images))
+//                .body(BengcallAPIResponseUser.EMAIL, equalTo(email));
+//    }
 
     @And("Response body should contain message {string}, fullname {string}, email {string}")
     public void responseBodyShouldContainMessageFullnameEmail(String message, String fullname, String email) {

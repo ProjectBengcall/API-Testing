@@ -1,8 +1,9 @@
 @User
-Feature: Create comment for a service that has been completed
+Feature: Comment user
   #API_BC_48
+  @demo
   Scenario Outline: Create comment for a service that has been completed with valid id
-    Given Create comment service with input id 3 and comment "<comment>" and valid token
+    Given Create comment service with input id 5 and comment "<comment>" and valid token
     When send request post comment with valid path
     Then Api should return response 201 Created
     And Put comment assert json validation

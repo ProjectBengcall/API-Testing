@@ -1,6 +1,7 @@
 @admin
 Feature: Vehicle admin on Bengcall
   #[API_BC_77]
+  @demo
   Scenario: View all vehicle type on admin with valid path
     Given Get view all vehicle type on admin with valid path
     When  Send request view all vehicle type on admin
@@ -9,6 +10,7 @@ Feature: Vehicle admin on Bengcall
     And   Get view all vehicle type on admin response contain success get all vehicle
 
   #[API_BC_78]
+
   Scenario: View all vehicle type on admin with invalid path
     Given Get view all vehicle type on admin with invalid path
     When  Send request view all vehicle type on admin invalid path
@@ -65,7 +67,7 @@ Feature: Vehicle admin on Bengcall
     And   Delete new vehicle type on admin response contain Success delete vehicle
     Examples:
     |id|
-    |110|
+    |114|
 
   #[API_BC_85]
   Scenario Outline: Delete vehicle type on admin with deleted id

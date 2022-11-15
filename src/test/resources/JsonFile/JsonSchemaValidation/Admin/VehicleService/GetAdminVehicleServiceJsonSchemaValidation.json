@@ -59,6 +59,126 @@
               "type": "string"
             },
             "services": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "service_name": {
+                      "type": "string"
+                    },
+                    "price": {
+                      "type": "integer"
+                    },
+                    "vehicle_id": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "service_name",
+                    "price",
+                    "vehicle_id"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "name_vehicle",
+            "services"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name_vehicle": {
+              "type": "string"
+            },
+            "services": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "name_vehicle",
+            "services"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name_vehicle": {
+              "type": "string"
+            },
+            "services": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "name_vehicle",
+            "services"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name_vehicle": {
+              "type": "string"
+            },
+            "services": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "name_vehicle",
+            "services"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name_vehicle": {
+              "type": "string"
+            },
+            "services": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "name_vehicle",
+            "services"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name_vehicle": {
+              "type": "string"
+            },
+            "services": {
               "type": "null"
             }
           },
