@@ -57,6 +57,22 @@
 ![GitHub](https://img.shields.io/badge/github%20Project-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)
 
+## 🏎️ How to Running
+
+```bash
+  git clone https://github.com/ProjectBengcall/API-Testing.git
+```
+Go to the project directory
+
+```bash
+  cd API-Testing
+```
+Open Intellij IDE and open the terminal
+
+```bash
+  mvn clean verify
+```
+
 
 ## 📱 Our teams
 
