@@ -23,9 +23,10 @@ Feature: Transaction Admin on Bengcall
   Scenario: Get detail transaction data on admin with special character
     Given Get detail transaction data on admin with special character and valid token @#$%
     When  Send request get detail transaction on admin with special character
-    Then  Api should return response 400 Bad Request
+    Then  Api should return response 200 Bad Request
     And   Get detail transaction data on admin invalid data assert json validation
-    And   Get detail transaction data on admin response contain message @@
+    And   Get detail transaction data on admin response contain Success get detail transaction data
+
 
   #[API_BC_66]
   Scenario: Get detail transaction data on admin with invalid token
@@ -92,11 +93,11 @@ Feature: Transaction Admin on Bengcall
 
   #[API_BC_73]
   Scenario: Update transaction on admin with leave mandatory value in empty
-    Given Set update transaction data on admin empty value data with id 1
+    Given Set update transaction data on admin empty value data with id 11
     When  Send request update transaction data on admin
-    Then  Api should return response 400 Bad Request
+    Then  Api should return response 201 Created
     And   Update transaction invalid data on admin assert json validation
-    And   Update transaction invalid data on admin response contain BUG
+    And   Update transaction invalid data on admin response contain Success update transaction status
 
   #[API_BC_74]
   Scenario Outline: Cancel transaction on admin with valid id

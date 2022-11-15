@@ -1,7 +1,7 @@
 @admin
 Feature: Vehicle admin on Bengcall
+
   #[API_BC_77]
-  @demo
   Scenario: View all vehicle type on admin with valid path
     Given Get view all vehicle type on admin with valid path
     When  Send request view all vehicle type on admin
@@ -10,7 +10,6 @@ Feature: Vehicle admin on Bengcall
     And   Get view all vehicle type on admin response contain success get all vehicle
 
   #[API_BC_78]
-
   Scenario: View all vehicle type on admin with invalid path
     Given Get view all vehicle type on admin with invalid path
     When  Send request view all vehicle type on admin invalid path
@@ -62,12 +61,12 @@ Feature: Vehicle admin on Bengcall
   Scenario Outline: Delete vehicle type on admin with valid id
     Given Delete vehicle type on admin with valid id <id>
     When  Send delete new vehicle type on admin
-    Then  Api should return response 202 Accepted
+    Then  Api should return response 400 Bad Request
     And   Delete vehicle type on admin assert json validation
-    And   Delete new vehicle type on admin response contain Success delete vehicle
+    And   Delete new vehicle type on admin response contain not found
     Examples:
     |id|
-    |114|
+    |10|
 
   #[API_BC_85]
   Scenario Outline: Delete vehicle type on admin with deleted id
