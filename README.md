@@ -53,20 +53,16 @@
 ![GitHub](https://img.shields.io/badge/github%20Project-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)
 
-## 🏎️ How to Running
+## 🏎️ How to Run all Test Scenarios
 
+1. Clone the repository
 ```bash
-  git clone https://github.com/ProjectBengcall/API-Testing.git
+  $ git clone https://github.com/ProjectBengcall/API-Testing.git
 ```
-Go to the project directory
+2. Open  this Project Repository on Intellij IDE and Run this on the IDE terminal
 
 ```bash
-  cd API-Testing
-```
-Open  this Project Repository on Intellij IDE and open the terminal
-
-```bash
-  mvn clean verify
+  $ mvn clean verify
 ```
 
 
