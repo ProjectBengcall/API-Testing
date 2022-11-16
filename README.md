@@ -31,8 +31,11 @@
 #### Test Documentation Snippet
 ![report-api-chats](https://github.com/ProjectBengcall/API-Testing/blob/master/Test%20Documentation.png)
 
-#### Snippet when the Test Scenario is Run
+#### Automation Testing When Run in Intellij IDE
 ![report-api-runningtest](https://github.com/ProjectBengcall/API-Testing/blob/master/Test%20running%20snippet.png)
+
+#### Manual Testing When Run in Postman
+![report-api-runningtest](https://github.com/ProjectBengcall/API-Testing/blob/master/test%20runing%20snippet%20on%20postman.png)
 
 ## 🛠 Tools
 **Manual:**
