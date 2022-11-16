@@ -20,16 +20,19 @@
 [Test Case API](https://docs.google.com/spreadsheets/d/1PiTyEaUEnev3VWnekC4_H_NPv4qrIAJJvtHs6haPhmU/edit?usp=sharing)
 
 ## 📝 Reports
-<!--
-#### Login
-![report-api-login](https://user-images.githubusercontent.com/68207916/186056420-bf4e443d-2e33-45e8-a07c-ac6757ceb643.png)
 
-#### Register
-![report-api-register](https://user-images.githubusercontent.com/68207916/186057740-8d5ea020-f722-4d6e-a8ba-098efb53426c.png)
 
-#### Chats
-![report-api-chats](https://user-images.githubusercontent.com/68207916/186059526-aa1641ed-12c8-47c1-9eae-e8f9aa9daa73.png)
--->
+#### Summary Report
+![report-api-summary](https://github.com/ProjectBengcall/API-Testing/blob/master/Summary%20Report.png)
+
+#### Coverage Report
+![report-api-cpverage](https://github.com/ProjectBengcall/API-Testing/blob/master/Report%20coverage.png)
+
+#### Test Documentation Snippet
+![report-api-chats](https://github.com/ProjectBengcall/API-Testing/blob/master/Test%20Documentation.png)
+
+#### Snippet when the Test Scenario is Run
+![report-api-runningtest](https://github.com/ProjectBengcall/API-Testing/blob/master/Test%20running%20snippet.png)
 
 ## 🛠 Tools
 **Manual:**
