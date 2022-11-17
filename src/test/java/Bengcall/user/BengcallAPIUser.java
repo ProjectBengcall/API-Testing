@@ -30,7 +30,7 @@ public class BengcallAPIUser {
     public static final String DETAIL_TRANSACTION_USER_INVALID_PATH = BASE_URL+"/transaction/meee";
     public static final String ONGOING_USER_TRANSACTION_USER_VALID_PATH = BASE_URL+"/transaction/{id}";
     public static final String ONGOING_USER_TRANSACTION_USER_INVALID_PATH = BASE_URL+"/transactions/{id}";
-    public static final String VALID_TOKEN ="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHBpcmVkIjoxNjY4NTcwNTk0LCJpZCI6MTUyLCJyb2xlIjowfQ.S2kTY6IbrwtOrLC00vL5Z4S6NMG1ta0qvqvIeLxJlSI";
+    public static final String VALID_TOKEN ="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHBpcmVkIjoxNjY4NTcyOTY2LCJpZCI6MTU3LCJyb2xlIjowfQ.33J_Lm94hr_ArmgJhTOyKRImoAiVQ6kDRZcd2zDts3M";
     public static final String EXPIRED_TOKEN ="Bearer eyeeeerwJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHBpcmVkIjoxNjY3NzkyNzM2LCJpZCI6Miwicm9sZSI6MX0.bIdQ95WTl2ArvKn7RSptNgBBPZ08W2iPPJbxjefSRVE";
     public static final String TOKEN_ON_CUSTOMER_ACCOUNT_NOT_EXIST ="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHBpcmVkIjoxNjY3NzEyNjYxLCJpZCI6Nywicm9sZSI6MH0.BsCCA7kROz9yldDro-l-kjNP7RoF13l1-fyRbDWdeSA";
 

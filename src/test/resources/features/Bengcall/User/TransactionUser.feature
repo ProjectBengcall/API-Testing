@@ -88,15 +88,15 @@ Feature: Transaction user
     When send requeat get detail transaction with valid path
     Then Api should return response 404 Not Found
     And response body failedd assert json validation
-    And Response body invalid path should contain message "Not Found"
+    And Response body invalid path should contain message "Success get detail transaction data"
 
   #API_BC_37
   Scenario: See detail user's transaction with invalid id (combine string, numeric, and special character)
     Given Get detail user's transaction with invalid id "3g@" and valid token
     When send requeat get detail transaction with valid path
-    Then Api should return response 404 Not Found
+    Then Api should return response 200 Not Found
     And response body failedd assert json validation
-    And Response body invalid path should contain message "Not Found"
+    And Response body invalid path should contain message "Success get detail transaction data"
 
   #API_BC_38
   Scenario: See detail user's transaction with invalid path

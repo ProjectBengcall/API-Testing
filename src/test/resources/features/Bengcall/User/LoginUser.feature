@@ -1,4 +1,4 @@
-@User
+@User @loginuser
 Feature: Login as Customer
   #API_BC_8
   @demo
