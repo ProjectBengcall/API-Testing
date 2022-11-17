@@ -23,19 +23,19 @@
 
 
 #### Summary Report
-![report-api-summary](https://github.com/ProjectBengcall/API-Testing/blob/master/Summary%20Report.png)
+![report-api-summary](https://github.com/ProjectBengcall/API-Testing/blob/master/img/Summary%20Report.png)
 
 #### Coverage Report
-![report-api-cpverage](https://github.com/ProjectBengcall/API-Testing/blob/master/Report%20coverage.png)
+![report-api-cpverage](https://github.com/ProjectBengcall/API-Testing/blob/master/img/Report%20coverage.png)
 
 #### Test Documentation Snippet
-![report-api-chats](https://github.com/ProjectBengcall/API-Testing/blob/master/Test%20Documentation.png)
+![report-api-chats](https://github.com/ProjectBengcall/API-Testing/blob/master/img/Test%20Documentation.png)
 
 #### Automation Testing When Run in Intellij IDE
-![report-api-runningtest](https://github.com/ProjectBengcall/API-Testing/blob/master/Test%20running%20snippet.png)
+![report-api-runningtest](https://github.com/ProjectBengcall/API-Testing/blob/master/img/Test%20running%20snippet.png)
 
 #### Manual Testing When Run in Postman
-![report-api-runningtest](https://github.com/ProjectBengcall/API-Testing/blob/master/test%20runing%20snippet%20on%20postman.png)
+![report-api-runningtest](https://github.com/ProjectBengcall/API-Testing/blob/master/img/test%20runing%20snippet%20on%20postman.png)
 
 ## 🛠 Tools
 **Manual:**
