@@ -4,6 +4,8 @@
   </a>
 
   <p align="center">
+    API Automation Testing Project
+    <br />
     Capstone Program Immersive Alterra Academy
     <br />
     <a href="https://app.swaggerhub.com/apis-docs/9tw/Bengcall/1.0.0#/"><strong>| Open API Documentation |</strong></a>
